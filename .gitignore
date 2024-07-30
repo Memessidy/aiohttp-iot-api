@@ -4,3 +4,4 @@ ENV
 *__init__*
 *.pytest*
 *__pycache__*
+.venv

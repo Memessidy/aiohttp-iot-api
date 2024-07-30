@@ -6,7 +6,7 @@ To start using these scripts, you need to:
 - Create a virtual environment using the command ```python -m venv .venv```
 - Activate the virtual environment: ```.venv\Scripts\activate```
 - Install all necessary dependencies: ```pip install -r requirements.txt```
-- Then you can run it ```python app.py```
+- Then you can run it ```python app.py``` and go to ```http://localhost:8000/devices```
 
 ## Run in docker container
 - add all necessary information to .env
