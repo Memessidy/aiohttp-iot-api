@@ -34,7 +34,7 @@ def create_app():
 if __name__ == '__main__':
     app, db = create_app()
     try:
-        web.run_app(app, host='0.0.0.0', port=8000)
+        web.run_app(app, host="0.0.0.0", port=8000)
     except Exception as e:
         settings.logger.info(f"Program stopped. Error: {e}")
         db.close()

@@ -10,6 +10,8 @@ services:
     depends_on:
       - db
     restart: always
+    networks:
+      - mynetwork
 
   db:
     image: postgres:13
@@ -20,7 +22,10 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     restart: always
-
+    env_file:
+      - .env
+    networks:
+      - mynetwork
 #  test:
 #    build:
 #      context: .
@@ -37,3 +42,7 @@ services:
 
 volumes:
   postgres_data:
+
+networks:
+  mynetwork:
+    driver: bridge
